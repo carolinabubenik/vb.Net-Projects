@@ -1,3 +1,5 @@
+STYLE MANAGER
+
 This is an internal project used as a library in other projects of the company.
 
 It has two main purposes:

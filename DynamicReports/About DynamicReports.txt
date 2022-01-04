@@ -1,0 +1,3 @@
+DYNAMIC REPORTS
+
+It allows you to create new Reports without designing, coding and publishing a new version of the software. A technical user must  provide an SQL query, specify columns to display and filters to apply, so that later a system user can process the specified report.
