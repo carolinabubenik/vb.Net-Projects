@@ -1,0 +1,104 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+StyleManager
+</name>
+</assembly>
+<members>
+<member name="T:StyleManager.My.Resources.Resources">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:StyleManager.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:StyleManager.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:StyleManager.My.Resources.Resources.add">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:StyleManager.My.Resources.Resources.cross">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="M:StyleManager.ClsEstilo.EstiloAControl(System.Object,System.Object,System.Object)">
+ <summary>
+ 
+ </summary>
+ <param name="c">Control al que se van a aplicar los estilos</param>
+ <param name="tipo">Es necesario pasarle tipo "Form" a los formularios ya que cada uno tiene un tipo diferente</param>
+ <remarks></remarks>
+</member>
+<member name="M:StyleManager.ClsEstilo.AplicarPropiedad(System.Windows.Forms.Control,System.String,System.String)">
+ <summary>
+ Aplica a la propiedad "propiedadControl" del control "ctrl" el valor configurado para la propiedad "propiedadAAplicar"
+ </summary>
+ <param name="ctrl">Control al cual aplicar la propiedad. Ej: un label (Label1)</param>
+ <param name="propiedadControl">Nombre de la propiedad del control a la que se le va a colocar el valor. Ej: "ForeColor".</param>
+ <param name="propiedadAAplicar">Nombre de la propiedad configurada con los valores deseados. Ej: "ColorResaltado"</param>
+ <remarks>Si falla en algún caso, el control queda sin modificaciones.</remarks>
+</member>
+<member name="M:StyleManager.ClsEstilo.HacerSoloLectura(System.Windows.Forms.Form@)">
+ <summary>
+ Inhabilita todos los controles de un formulario.
+ </summary>
+ <param name="frm"></param>
+ <remarks>No lo hace con controles contenedores, como paneles o groupBoxes.
+ Si se desea habilitar algún control especial, hacerlo puntualmente luego de llamar a este método.</remarks>
+</member>
+<member name="M:StyleManager.ClsEstilo.HotKeysBasicas(System.Windows.Forms.Form@)">
+ <summary>
+ Agrega la lógica para accesos de teclados Básicos a un formulario. Ej: Aceptar/Cancelar/Buscar/Nuevo/Modificar/Eliminar
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:StyleManager.ClsEstilo.HotKeysBasicas(System.Windows.Forms.TabPage@,System.Windows.Forms.Form@)">
+ <summary>
+ Agrega la lógica para accesos de teclados Básicos a una pestaña. Ej: Aceptar/Cancelar/Buscar/Nuevo/Modificar/Eliminar
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:StyleManager.ClsEstilo.AddHotKey(System.Windows.Forms.Form@,System.Windows.Forms.Button@,System.String,System.String)">
+ <summary>
+ Permite agregar la HotKey que corresponda a la función indicada para el botón (button) indicado
+ </summary>
+</member>
+<member name="M:StyleManager.ClsEstilo.AddHotKey(System.Windows.Forms.Form@,System.Windows.Forms.ToolStripMenuItem@,System.String,System.String)">
+ <summary>
+ Permite agregar la HotKey que corresponda a la función indicada para el botón (ToolStripMenuItem) indicado
+ </summary>
+</member>
+<member name="M:StyleManager.ClsEstilo.AddHotKey(System.Windows.Forms.Form@,System.Windows.Forms.ToolStripButton@,System.String,System.String)">
+ <summary>
+ Permite agregar la HotKey que corresponda a la función indicada para el botón (ToolStripButton) indicado
+ </summary>
+</member>
+<member name="M:StyleManager.ClsEstilo.AddHotKey(System.Object@,System.Windows.Forms.Form@,System.String,System.String,System.Int32)">
+ <summary>
+ Agrega la lógica para manejar una combinación de teclas a un botón, tomando la combinación de lo configurado
+ en Parámetros (según el nombre de la función). Agrega una leyenda informativa.
+ </summary>
+ <param name="btn">Button cuyo evento Click se va a desencadenar al detectar la combinación de teclas presionada.</param>
+ <param name="frm">Formulario que contiene el botón.</param>
+ <param name="funcionParametrizada">Nombre de la función a buscar en los parametros. Ej: ACEPTAR; CANCELAR/SALIR; NUEVO; etc.</param>
+ <param name="nombreLeyenda">Leyenda a mostrar al pie del formulario. Si se omite, se muestra el nombre de la función. Ej: "Nuevo Presupuesto".</param>
+ <remarks></remarks>
+</member>
+<member name="P:StyleManager.ClsEstilo.combinacionTecla.btn">
+ <summary>
+ Debe ser Button o ToolStripMenuItem o ToolStripButton
+ </summary>
+</member>
+</members>
+</doc>

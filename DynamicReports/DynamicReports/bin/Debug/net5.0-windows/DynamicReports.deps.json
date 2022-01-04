@@ -1,0 +1,165 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "DynamicReports/1.0.0": {
+        "dependencies": {
+          "modEntities": "1.0.0.0",
+          "modEstilos": "1.0.0.0",
+          "modFunciones": "1.0.0.0",
+          "modPermisos": "1.0.0.0",
+          "modRecursos": "1.0.0.0",
+          "MySql.Data": "8.0.22.0",
+          "Telerik.Reporting": "13.2.19.1030",
+          "Telerik.ReportViewer.WinForms": "13.2.19.1030",
+          "Telerik.WinControls": "2015.2.728.40",
+          "Telerik.WinControls.UI": "2015.2.728.40"
+        },
+        "runtime": {
+          "DynamicReports.dll": {}
+        }
+      },
+      "modEntities/1.0.0.0": {
+        "runtime": {
+          "modEntities.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "modEstilos/1.0.0.0": {
+        "runtime": {
+          "modEstilos.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "modFunciones/1.0.0.0": {
+        "runtime": {
+          "modFunciones.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "modPermisos/1.0.0.0": {
+        "runtime": {
+          "modPermisos.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "modRecursos/1.0.0.0": {
+        "runtime": {
+          "modRecursos.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "MySql.Data/8.0.22.0": {
+        "runtime": {
+          "MySql.Data.dll": {
+            "assemblyVersion": "8.0.22.0",
+            "fileVersion": "8.0.22.0"
+          }
+        }
+      },
+      "Telerik.Reporting/13.2.19.1030": {
+        "runtime": {
+          "Telerik.Reporting.dll": {
+            "assemblyVersion": "13.2.19.1030",
+            "fileVersion": "13.2.19.1030"
+          }
+        }
+      },
+      "Telerik.ReportViewer.WinForms/13.2.19.1030": {
+        "runtime": {
+          "Telerik.ReportViewer.WinForms.dll": {
+            "assemblyVersion": "13.2.19.1030",
+            "fileVersion": "13.2.19.1030"
+          }
+        }
+      },
+      "Telerik.WinControls/2015.2.728.40": {
+        "runtime": {
+          "Telerik.WinControls.dll": {
+            "assemblyVersion": "2015.2.728.40",
+            "fileVersion": "2015.2.728.40"
+          }
+        }
+      },
+      "Telerik.WinControls.UI/2015.2.728.40": {
+        "runtime": {
+          "Telerik.WinControls.UI.dll": {
+            "assemblyVersion": "2015.2.728.40",
+            "fileVersion": "2015.2.728.40"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DynamicReports/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "modEntities/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "modEstilos/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "modFunciones/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "modPermisos/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "modRecursos/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MySql.Data/8.0.22.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Telerik.Reporting/13.2.19.1030": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Telerik.ReportViewer.WinForms/13.2.19.1030": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Telerik.WinControls/2015.2.728.40": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Telerik.WinControls.UI/2015.2.728.40": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
