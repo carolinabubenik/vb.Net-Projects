@@ -1,0 +1,55 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DynamicReports
+</name>
+</assembly>
+<members>
+<member name="T:DynamicReports.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:DynamicReports.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:DynamicReports.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:DynamicReports.ClsReportes.#ctor(System.Windows.Forms.Form)">
+ <summary>
+ Si se le pasa el Formulario, agrega el manejador del evento KeyDown para controlar el "F11" (ocultar controles prueba)
+ </summary>
+ <param name="frm"></param>
+</member>
+<member name="M:DynamicReports.ClsReportes.ReporteToPDF(Telerik.Reporting.Report,System.String,System.Boolean,System.String)">
+ <summary>
+ Genera un PDF del reporte indicado (ya instanciado) en la ruta indicada, o en la carpeta Temporal si se omite.
+ Devuelve la ruta y nombre del archivo creado, o un string vacío si no se pudo crear.
+ </summary>
+</member>
+<member name="M:DynamicReports.FrmListado.HabilitarSeccionColumna(System.Boolean)">
+ <summary>
+ Al habilita la seccion de datos de columna, se inhabilita la grilla.
+ </summary>
+ <param name="valor"></param>
+</member>
+<member name="M:DynamicReports.FrmListado.HabilitarSeccionParametro(System.Boolean)">
+ <summary>
+ Al habilita la seccion de datos de parametros, se inhabilita la grilla.
+ </summary>
+ <param name="valor"></param>
+</member>
+<member name="M:DynamicReports.FrmListados.InicializarListado">
+ <summary>
+ Busca el listado deseado y los parámetros que se deben solicitar al usuario
+ </summary>
+</member>
+</members>
+</doc>
