@@ -1,0 +1,52 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CommunicationManager
+</name>
+</assembly>
+<members>
+<member name="T:CommunicationManager.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:CommunicationManager.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:CommunicationManager.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:CommunicationManager.ClsComunicacion.getArbolMotivos(System.String,modEntities.comunicacion,System.Int32,System.Int32)">
+ <summary>
+ Devuelve un arbol de Motivos, filtrando por Pertenece y opcionalmente sólo los motivos que participan de la comunicación que se le pasa.
+ </summary>
+ <param name="pertenece">TODAS | CLIENTE | PROVEEDOR | INTERNA</param>
+ <param name="comunicacionParaFiltrar">Sólo se incluyen los motivos (o sus padres) que ya participaron de la comunicación</param>
+</member>
+<member name="M:CommunicationManager.FrmAdmComunicaciones.#ctor">
+ <summary>
+ Muestra todas las comunicaciones. Por defecto muestra los ultimos 7 dias.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:CommunicationManager.FrmAdmComunicaciones.#ctor(modEntities.ClsVariablesSesion,modEntities.cliente)">
+ <summary>
+ Muestra las Comunicaciones de un cliente.
+ </summary>
+ <param name="Cliente"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CommunicationManager.FrmAdmComunicaciones.Iniciar">
+ <summary>
+ Ininicializa los objetos necesarios (invoca al Load de este formulario)
+ </summary>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

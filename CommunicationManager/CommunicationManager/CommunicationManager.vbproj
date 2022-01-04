@@ -48,6 +48,27 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="modEntidad">
+      <HintPath>..\..\Libraries\modEntidad.dll</HintPath>
+    </Reference>
+    <Reference Include="modEntities">
+      <HintPath>..\..\Libraries\modEntities.dll</HintPath>
+    </Reference>
+    <Reference Include="modEstilos">
+      <HintPath>..\..\Libraries\modEstilos.dll</HintPath>
+    </Reference>
+    <Reference Include="modFunciones">
+      <HintPath>..\..\Libraries\modFunciones.dll</HintPath>
+    </Reference>
+    <Reference Include="modPermisos">
+      <HintPath>..\..\Libraries\modPermisos.dll</HintPath>
+    </Reference>
+    <Reference Include="modRecursos">
+      <HintPath>..\..\Libraries\modRecursos.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\Libraries\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -58,6 +79,14 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="Telerik.WinControls, Version=2013.1.321.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2013.1.321.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -73,13 +102,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="BL\ClsComunicacion.vb" />
+    <Compile Include="BL\ClsEntidad.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -95,6 +119,30 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PL\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmAdmComunicaciones.Designer.vb">
+      <DependentUpon>FrmAdmComunicaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmAdmComunicaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmComunicacion.Designer.vb">
+      <DependentUpon>FrmComunicacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmComunicacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmDialogos.Designer.vb">
+      <DependentUpon>FrmDialogos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmDialogos.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -102,6 +150,18 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmAdmComunicaciones.resx">
+      <DependentUpon>FrmAdmComunicaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmComunicacion.resx">
+      <DependentUpon>FrmComunicacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmDialogos.resx">
+      <DependentUpon>FrmDialogos.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
