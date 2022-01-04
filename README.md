@@ -1,4 +1,4 @@
-# Proyectos-Carolina
+# Carolina vb.Net Projects
 
 These are just some small project I've created. They are in fact part of a bigger solution so here there look like disconnected parts. 
 
