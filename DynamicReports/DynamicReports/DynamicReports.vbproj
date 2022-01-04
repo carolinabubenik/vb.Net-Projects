@@ -1,76 +1,149 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9420E46C-DADC-4ADA-B59B-738D1C73A71B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <StartupObject>DynamicReports.My.MyApplication</StartupObject>
     <RootNamespace>DynamicReports</RootNamespace>
-    <StartupObject>Sub Main</StartupObject>
-    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>DynamicReports</AssemblyName>
+    <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
-
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>DynamicReports.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>DynamicReports.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
     <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
     <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
   </ItemGroup>
-
   <ItemGroup>
-    <Compile Update="My Project\Application.Designer.vb">
-      <DesignTime>True</DesignTime>
+    <Compile Include="BL\ClsListado.vb" />
+    <Compile Include="BL\ClsReportes.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
-    <Compile Update="My Project\Settings.Designer.vb">
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PL\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmListado.Designer.vb">
+      <DependentUpon>FrmListado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmListado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmListados.Designer.vb">
+      <DependentUpon>FrmListados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmListados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\rptListado.Designer.vb">
+      <DependentUpon>rptListado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PL\rptListado.vb" />
   </ItemGroup>
-
   <ItemGroup>
-    <None Update="My Project\Application.myapp">
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmListado.resx">
+      <DependentUpon>FrmListado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmListados.resx">
+      <DependentUpon>FrmListados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\rptListado.resx">
+      <DependentUpon>rptListado.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
-    <None Update="My Project\Settings.settings">
-      <CustomToolNamespace>My</CustomToolNamespace>
+    <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <None Include="App.config" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="modEntities">
-      <HintPath>..\..\Libraries\modEntities.dll</HintPath>
-    </Reference>
-    <Reference Include="modEstilos">
-      <HintPath>..\..\Libraries\modEstilos.dll</HintPath>
-    </Reference>
-    <Reference Include="modFunciones">
-      <HintPath>..\..\Libraries\modFunciones.dll</HintPath>
-    </Reference>
-    <Reference Include="modPermisos">
-      <HintPath>..\..\Libraries\modPermisos.dll</HintPath>
-    </Reference>
-    <Reference Include="modRecursos">
-      <HintPath>..\..\Libraries\modRecursos.dll</HintPath>
-    </Reference>
-    <Reference Include="MySql.Data">
-      <HintPath>..\..\Libraries\MySql.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Reporting">
-      <HintPath>..\..\Libraries\Telerik.Reporting.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.ReportViewer.WinForms">
-      <HintPath>..\..\Libraries\Telerik.ReportViewer.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.WinControls">
-      <HintPath>..\..\Libraries\Telerik.WinControls.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.WinControls.UI">
-      <HintPath>..\..\Libraries\Telerik.WinControls.UI.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
